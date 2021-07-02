@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: suvankarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: suvankarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: suvankarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: suvankarpipelinesjavascriptdocker 
+          image: mycontainerregistry1508.azurecr.io/suvankarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
